@@ -1,6 +1,6 @@
 # multi-k8s
 This is a react application
-Here are the steps to build the application locally and deploy on locally installed Kubernetes cluster. 
+<br/>Here are the steps to build the application locally and deploy on locally installed Kubernetes cluster. 
 1. Install docker; follow docker installation guide https://docs.docker.com/install/
 2. Install the minikube to set up kubernetes cluster; follow the link https://kubernetes.io/docs/setup/minikube/#installation
 3. Following steps to deploy all the application in kubernetes cluster.
