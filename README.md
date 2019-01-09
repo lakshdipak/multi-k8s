@@ -6,6 +6,12 @@ This is a react application
 3. Following steps to deploy all the application in kubernetes cluster.
   <br/>change to the complex directory inside your workspace
   <br/><i>$cd complex</i>
+  <br/> To avoid adding plain text password in yaml file to connect with posgtres, use below command which creates seceret in kubernetes and can be accessed at run time by services.
+ <br/>Command Create a secetet to store confidencial data like password
+ <BR/><i>$kubectl create secret <type-of-secret> <secret-name> --from-literal key=value (key value pair of the secret information)</i>
+  <br/><i>$kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345678</i>
+  <br/>To list the available secrets
+  <br><i>$kubectl get secrets</i>
   <br/>run kubectl to deploy the application you can deploy application one by one or you can deploy all application by giving the directory path of deployment yaml files. In my case it is k8s in side complex folder.
   <br/><i>$kubetcl apply –f  k8s/</i>
   <br/>Above command should return saying changes applied in multiple lines for each deployment and ClusterIPService.
